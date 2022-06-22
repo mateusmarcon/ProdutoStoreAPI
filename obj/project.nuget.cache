@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j/VckaqOpbtTPCH7DjPiHkq7ogHWOd1kVJOUKti7qwfanBOkzr9+g4vohdSYZb/lw9ZxAkL4U5abu/wofoohTA==",
+  "dgSpecHash": "CLnR+vkSW2n49qS2WtXYTsT+kXeD2VuXXVk+I0511JSFzFhgX32bPP3zChDp+ODFEcChsrhh11GBaEkdj90HeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi.csproj",
+  "projectFilePath": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi\\ProdutoStoreAPI\\ProdutoStoreApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.17\\microsoft.aspnetcore.jsonpatch.5.0.17.nupkg.sha512",

@@ -31,15 +31,13 @@ namespace ProdutoStoreApi.Service
         {
             try
             {
-                return dbContext.CategoriaProdutos.AsNoTracking(); 
+                return dbContext.CategoriaProdutos.Include(p=>p.Produtos).AsNoTracking(); 
 
             }
             catch
             {
                 throw;
             }
-
-
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi.csproj": {}
+    "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi\\ProdutoStoreAPI\\ProdutoStoreApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi.csproj": {
+    "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi\\ProdutoStoreAPI\\ProdutoStoreApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi\\ProdutoStoreAPI\\ProdutoStoreApi.csproj",
         "projectName": "ProdutoStoreApi",
-        "projectPath": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi.csproj",
+        "projectPath": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi\\ProdutoStoreAPI\\ProdutoStoreApi.csproj",
         "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\obj\\",
+        "outputPath": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi\\ProdutoStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

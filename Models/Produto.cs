@@ -20,7 +20,7 @@ namespace ProdutoStoreApi.Models
 
         [ForeignKey("CategoriaProduto")]
         public int CategoriaID { get; set; }
-        public CategoriaProduto CategoriaProduto { get; set; }
+        public virtual CategoriaProduto CategoriaProduto { get; set; }
 
 
     }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,6 +17,7 @@ namespace ProdutoStoreApi.Models
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public bool Ativo { get; set; }
-        public ICollection<Produto> Produtos { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }

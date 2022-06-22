@@ -13,7 +13,7 @@ namespace ProdutoStoreApi.Service
         ProdStoreContext dbContext = new ProdStoreContext();
         public IQueryable<Produto> Get()
         {
-            return dbContext.Produtos.AsNoTracking();
+            return dbContext.Produtos.Include(p=>p.CategoriaProduto).ToList().AsQueryable();
         }
 
         public Produto Set(Produto produto)
