@@ -28,9 +28,8 @@ namespace ProdutoStoreApi.Controllers
         {
 
             try
-            {
-                prodService.Set(produto);
-                return Ok();
+            {             
+                return Ok(prodService.Set(produto));
 
             }
             catch (Exception ex)
