@@ -60,8 +60,15 @@ namespace ProdutoStoreApi.Service
                 throw;
             }
             return produto;
+        }
 
+        public bool ProdutoValidation(Produto produto)
+        {
 
+            if ((string.IsNullOrEmpty(produto.Nome)) || (string.IsNullOrEmpty(produto.Descricao)) || (produto.CategoriaID ==0))
+                return false;
+
+            return true;
         }
     }
 }

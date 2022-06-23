@@ -26,7 +26,8 @@ namespace ProdutoStoreApi.Controllers
         [HttpPost]
         public IActionResult Set(Produto produto)
         {
-
+            if (!prodService.ProdutoValidation(produto))
+                return BadRequest("Verifique os dados enviados.");
             try
             {             
                 return Ok(prodService.Set(produto));
@@ -34,7 +35,7 @@ namespace ProdutoStoreApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest();
+                return StatusCode(500, "Erro: " + ex.Message);
             }
 
         }
@@ -42,6 +43,9 @@ namespace ProdutoStoreApi.Controllers
         [HttpPut]
         public IActionResult Update(Produto produto)
         {
+            if (!prodService.ProdutoValidation(produto) || produto.Id == 0 )
+                return BadRequest("Verifique os dados enviados.");
+
             try
             {
                 prodService.Update(produto);
@@ -50,7 +54,7 @@ namespace ProdutoStoreApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest();
+                return StatusCode(500, "Erro: " + ex.Message);
             }
 
         }
@@ -58,6 +62,8 @@ namespace ProdutoStoreApi.Controllers
         [HttpDelete]
         public IActionResult Delete(Produto produto)
         {
+            if (produto.Id == 0)
+                return BadRequest("Id não informado");
             try
             {
                 prodService.Delete(produto);
@@ -66,7 +72,7 @@ namespace ProdutoStoreApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest();
+                return StatusCode(500, "Erro: " + ex.Message);
             }
 
         }
