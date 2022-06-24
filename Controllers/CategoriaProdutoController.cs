@@ -15,7 +15,7 @@ namespace ProdutoStoreApi.Controllers
     [Route("[controller]")]
     public class CategoriaProdutoController : ControllerBase
     {
-        CategoriaProdutoService catProdService = new CategoriaProdutoService();
+        private readonly CategoriaProdutoService catProdService = new();
 
         [HttpGet]
         [EnableQuery]
@@ -36,7 +36,7 @@ namespace ProdutoStoreApi.Controllers
 
             }catch(Exception ex)
             {
-                return BadRequest();
+                return BadRequest("Erro: "+ex.Message);
             }
 
         }

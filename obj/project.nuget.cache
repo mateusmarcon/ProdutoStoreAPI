@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CLnR+vkSW2n49qS2WtXYTsT+kXeD2VuXXVk+I0511JSFzFhgX32bPP3zChDp+ODFEcChsrhh11GBaEkdj90HeQ==",
+  "dgSpecHash": "8h87f7/93FmknjysdirqjZsQ+EOnD6D1RvMtZD6ibMuedSt4J8b1kL8VpGk3Juf+1GMxQYi/ef69jJjCTl7Xrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\mateu\\source\\repos\\ProdutoStoreApi\\ProdutoStoreApi\\ProdutoStoreAPI\\ProdutoStoreApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mateu\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
+    "C:\\Users\\mateu\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.1.0\\fluentvalidation.aspnetcore.11.1.0.nupkg.sha512",
+    "C:\\Users\\mateu\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.17\\microsoft.aspnetcore.jsonpatch.5.0.17.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.17\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.17.nupkg.sha512",

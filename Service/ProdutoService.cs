@@ -10,7 +10,7 @@ namespace ProdutoStoreApi.Service
 {
     public class ProdutoService
     {
-        ProdStoreContext dbContext = new ProdStoreContext();
+        private readonly ProdStoreContext dbContext = new();
         public IQueryable<Produto> Get()
         {
             return dbContext.Produtos.Include(p=>p.CategoriaProduto).ToList().AsQueryable();
@@ -48,18 +48,21 @@ namespace ProdutoStoreApi.Service
 
         }
 
-        public Produto Delete(Produto produto)
+        public Produto Delete(int id)
         {
             try
             {
+                Produto produto = dbContext.Produtos.Find(id);
+
                 dbContext.Remove(produto);
                 dbContext.SaveChanges();
+                return produto;
             }
             catch
             {
                 throw;
             }
-            return produto;
+            
         }
 
         public bool ProdutoValidation(Produto produto)

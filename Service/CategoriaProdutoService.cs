@@ -10,12 +10,11 @@ namespace ProdutoStoreApi.Service
 {
     public class CategoriaProdutoService
     {
-        ProdStoreContext dbContext = new ProdStoreContext();
+        private readonly ProdStoreContext dbContext = new();
         public CategoriaProduto Set(CategoriaProduto catProduto)
         {
             try
             {
-                catProduto.Ativo = true;
                 dbContext.CategoriaProdutos.Add(catProduto);
                 dbContext.SaveChanges();
             } catch
@@ -24,7 +23,6 @@ namespace ProdutoStoreApi.Service
             }
             return catProduto;
 
-
         }
 
         public IQueryable<CategoriaProduto> Get()
@@ -32,7 +30,6 @@ namespace ProdutoStoreApi.Service
             try
             {
                 return dbContext.CategoriaProdutos.Include(p=>p.Produtos).AsNoTracking(); 
-
             }
             catch
             {

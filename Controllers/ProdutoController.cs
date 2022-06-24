@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
+using ProdutoStoreApi.DTOs;
 using ProdutoStoreApi.Models;
 using ProdutoStoreApi.Service;
 using System;
@@ -13,7 +14,7 @@ namespace ProdutoStoreApi.Controllers
     [Route("[controller]")]
     public class ProdutoController: ControllerBase
     {
-        ProdutoService prodService = new ProdutoService();
+        readonly ProdutoService prodService = new();
 
         [HttpGet]
         [EnableQuery]
@@ -26,8 +27,9 @@ namespace ProdutoStoreApi.Controllers
         [HttpPost]
         public IActionResult Set(Produto produto)
         {
-            if (!prodService.ProdutoValidation(produto))
-                return BadRequest("Verifique os dados enviados.");
+            if (produto.Id > 0)
+                return BadRequest("O Id é gerado automáticamente. revise os dados ou utilize o método de update");
+
             try
             {             
                 return Ok(prodService.Set(produto));
@@ -43,8 +45,8 @@ namespace ProdutoStoreApi.Controllers
         [HttpPut]
         public IActionResult Update(Produto produto)
         {
-            if (!prodService.ProdutoValidation(produto) || produto.Id == 0 )
-                return BadRequest("Verifique os dados enviados.");
+            if (produto.Id == 0 )
+                return BadRequest("Necessário informar o ID do produto a ser atualizado.");
 
             try
             {
@@ -60,13 +62,14 @@ namespace ProdutoStoreApi.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delete(Produto produto)
+        public IActionResult Delete(ProdutoDto produto)
         {
+         
             if (produto.Id == 0)
                 return BadRequest("Id não informado");
             try
             {
-                prodService.Delete(produto);
+                prodService.Delete(produto.Id);
                 return Ok();
 
             }
